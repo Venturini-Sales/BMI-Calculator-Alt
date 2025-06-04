@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>BMI Calculator</title>
+  <title>Calculadora IMC</title>
   <link href="https://fonts.googleapis.com/css2?family=Onest:wght@100;400;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <main class="container">
     <div class="bmiCalculator">
       <div>
-        <h1 class="calculatorTitle">Calculator - BMI</h1>
+        <h1 class="calculatorTitle">Calculadora IMC</h1>
       </div>
 
       <form class="inputArea" onsubmit="event.preventDefault(); calculateBMI();">
         <div class="heightInput">
-          <label>Your Height:</label>
+          <label>Sua Altura:</label>
           <div class="inputStyle">
             <input type="text" id="heightInput" oninput="formatHeight(this)">
             <span>m</span>
@@ -24,7 +26,7 @@
         </div>
 
         <div class="weightInput">
-          <label>Your Weight:</label>
+          <label>Seu Peso:</label>
           <div class="inputStyle">
             <input type="number" id="weightInput">
             <span>kg</span>
@@ -33,19 +35,19 @@
       </form>
 
       <div class="buttons">
-        <button class="calculateButton button" onclick="calculateBMI()">Calculate</button>
-        <button class="clearButton button" onclick="clearFields()">Clear</button>
+        <button class="calculateButton button" onclick="calculateBMI()">Calcular</button>
+        <button class="clearButton button" onclick="clearFields()">Limpar</button>
       </div>
 
       <div class="resultArea">
         <div class="result">
-          <p class="yourBMI">Your BMI is:</p>
+          <p class="yourBMI">Seu IMC é:</p>
           <h1 id="bmiResult" style="color: white">0.00</h1>
         </div>
 
         <div class="bmiScales">
           <div class="bmiScale scaleUnder">
-            <h4>Underweight</h4>
+            <h4>Abaixo do Peso</h4>
             <p>&lt; 18.5</p>
           </div>
           <div class="bmiScale scaleNormal">
@@ -53,11 +55,11 @@
             <p>18.5 — 25</p>
           </div>
           <div class="bmiScale scaleOver">
-            <h4>Overweight</h4>
+            <h4>Acima do Peso</h4>
             <p>25 — 30</p>
           </div>
           <div class="bmiScale scaleObese">
-            <h4>Obese</h4>
+            <h4>Obeso</h4>
             <p>≥ 30</p>
           </div>
         </div>
@@ -68,4 +70,5 @@
 
   <script src="script.js"></script>
 </body>
+
 </html>
